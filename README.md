@@ -105,4 +105,4 @@ _In our project we have developed 1 Android App, with 4 integrated modules in a 
  </tr>
 </table>
 
-🔥This project was made at Codebreak hackathon at MIT College, Pune
+🔥This project was made for SIH 2020 software edition
