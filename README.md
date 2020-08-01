@@ -2,7 +2,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)] 
 [![GitHub contributors](https://img.shields.io/github/contributors/MehtaAkshita/BC71_FORTIFY)]
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/MehtaAkshita/BC71_FORTIFY)]
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MehtaAkshita/BC71_FORTIFY)]
 
 <p align="center"><img src="logo_source" width="400" /></p>
 
