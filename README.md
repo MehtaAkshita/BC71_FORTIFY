@@ -17,7 +17,11 @@ A project aimed towards bringing the concept of connected cars using several mod
 </p>
 
 ## Project information ℹ️
-- **Project Name**: Connected Cars
+- **Team Name**: Fortify
+- **Problem Statement Number**: BC71
+- **Ministry**: Ministry of Housing and Urban Affairs
+
+
 - **Short Project Description**: _A deployable solution for many major road and traffic problems faced in day to day life._
 
 | Project Modules |  Description |
