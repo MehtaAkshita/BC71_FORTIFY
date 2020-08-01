@@ -27,12 +27,13 @@ A project aimed towards bringing the concept of connected cars using several mod
 | Project Modules |  Description |
 | --- | --- |
 | Congestion Prevention | Computer Vision based approch to control traffic lights based upon density calculation of vehicles |
-| Emergency Vehicle Priority | Notifying vehicles that are driving ahead of the approaching emergency vehicle |
 | Drowsiness Detection | Computer Vision based approch to indentify drowsiness of driver |
 | Pothole Detection | Using Yolov2 to idenetify potholes on the road and notify concerned authorities for the fix |
+| Emergency Vehicle Priority | Notifying vehicles that are driving ahead of the approaching emergency vehicle |
+
 
 - **Team Name**: FORTIFY
-- **Team Members**: _Naman Bansal [@psifrous](https://github.com/psifrous), Swapnil Panwala [@panwalas](https://github.com/panwalas), Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Arjun Mohnot [@Arjun009](https://github.com/https://github.com/Arjun009)_
+- **Team Members**:  _ Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Anshuman Aggarwal [@anshuman73](https://github.com/https://github.com/anshuman73), Naman Bansal [@psifrous](https://github.com/psifrous), Swapnil Panwala [@panwalas](https://github.com/panwalas), Zubin Choudhary [@Iamzubin](https://github.com/Iamzubin)_
 - **Demo Link**: _https://www.youtube.com/watch?v=Kq-9fL6Spwc_
 - **Repository Link**: https://github.com/psifrous/connected-cars
 - **Labels**: ML, Image & Video Processing, Android App, Web Development<br>
