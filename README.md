@@ -1,14 +1,10 @@
-# BC71_FORTIFY
-# SIH_2020
-# RKGIT
-# TEAM_FORTIFY
-# Connected-cars
+## BC71_FORTIFY - SIH_2020 - RKGIT - Ministry of Housing and Urban affairs
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)] 
-[![GitHub contributors](https://img.shields.io/github/contributors/psifrous/connected-cars)]
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/psifrous/connected-cars)]
+[![GitHub contributors](https://img.shields.io/github/contributors/MehtaAkshita/BC71_FORTIFY)]
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MehtaAkshita/BC71_FORTIFY)]
 
-<p align="center"><img src="https://github.com/psifrous/connected-cars/blob/master/images/logo.png" width="400" /></p>
+<p align="center"><img src="logo_source" width="400" /></p>
 
 ## Overview
 <p align="center">
@@ -28,16 +24,14 @@ A project aimed towards bringing the concept of connected cars using several mod
 | --- | --- |
 | Congestion Prevention | Computer Vision based approch to control traffic lights based upon density calculation of vehicles |
 | Facial Wallet for Public Transport | Faster checkin based for public transport system using facial recognition |
-| Drowsiness Detection | Computer Vision based approch to indentify drowsiness of driver |
 | Pothole Detection | Using Yolov2 to idenetify potholes on the road and notify concerned authorities for the fix |
-| Emergency Vehicle Priority | Notifying vehicles that are driving ahead of the approaching emergency vehicle |
+
 
 
 - **Team Name**: FORTIFY
-- **Team Members**:  _ Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Anshuman Aggarwal [@anshuman73](https://github.com/https://github.com/anshuman73), Naman Bansal [@psifrous](https://github.com/psifrous), Swapnil Panwala [@panwalas](https://github.com/panwalas), Zubin Choudhary [@Iamzubin](https://github.com/Iamzubin)_
-- **Demo Link**: _https://www.youtube.com/watch?v=Kq-9fL6Spwc_
-- **Repository Link**: https://github.com/psifrous/connected-cars
-- **Labels**: ML, Image & Video Processing, Android App, Web Development<br>
+- **Team Members**:  _ Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Anshuman Aggarwal [@anshuman73](https://github.com/https://github.com/anshuman73), Naman Bansal [@psifrous](https://github.com/psifrous), Shreyas Papinwar [@shreyaspapi](https://github.com/shreyaspapi), Swapnil Panwala [@panwalas](https://github.com/panwalas), Zubin Choudhary [@Iamzubin](https://github.com/Iamzubin)_
+- **Repository Link**: https://github.com/MehtaAkshita/BC71_FORTIFY
+- **Labels**: ML, Image & Video Processing, Facial recognition, Android App, Web Development<br>
 
 ## Platforms & Technologies used 📦
 ### Backend
@@ -46,6 +40,7 @@ A project aimed towards bringing the concept of connected cars using several mod
 * Keras
 * TensorFlow
 * Flask
+* Dlib
 ### Frontend
 * Dash by Plotly
 * JavaScript
@@ -74,13 +69,6 @@ Our project comprises of the following modules:
   <img src="https://github.com/psifrous/connected-cars/blob/master/images/Screenshot%20(91).png" width="400" /> 
 </p>
 
- 2) **Emergency Vehicle Priority:** Many people die in India because emergency vehicles don't reach required destination in time. Can we save life by informing people in advance about an incoming emergency vehicle? Definitely yes!
-
-<p align="center"><img src="https://github.com/psifrous/connected-cars/blob/master/images/Screenshot%20(93).png" width="400" /></p>
-
- 3) **Drowsiness Detection:** Drowsy driving is the dangerous combination of driving and sleepiness or fatigue and it has led to many car accidents. Can we wake up the driver by playing some loud alarm? Super yes!
-
-<p align="center"><img src="https://github.com/psifrous/connected-cars/blob/master/images/Screenshot%20(94).png" width="400" /></p>
 
  4) **Pothole Detection** : Potholes can cause severe damages to cars, passengers and to pedistrians too. It can damage your tire's sidewall or belts. Even a minor impact may knock your vehicle out of alignment. A pothole strike can damage your shocks or struts, or harm your suspension. Can we detect them and inform about that to the concerned authority and maintain a database? Sure yes! 
 
@@ -98,10 +86,13 @@ _In our project we have developed 1 Android App, with 4 integrated modules in a 
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/psifrous"><img src="https://avatars2.githubusercontent.com/u/36012704?s=460&v=4" width="100px;" alt="Naman Bansal"/><br /><sub><b>Naman Bansal</b></sub></a><br />
-    <td align="center"><a href="https://github.com/panwalas"><img src="https://avatars2.githubusercontent.com/u/39371808?s=460&v=4" width="100px;" alt="Swapnil Panwalas"/><br /><sub><b>Swapnil Panwala</b></sub></a><br />
-    <td align="center"><a href="https://github.com/Arjun009"><img src="https://avatars0.githubusercontent.com/u/33459977?s=400&v=4" width="100px;" alt="Arjun Mohnot"/><br /><sub><b>Arjun Mohnot</b></sub></a><br />
     <td align="center"><a href="https://github.com/MehtaAkshita"><img src="https://avatars2.githubusercontent.com/u/44060710?s=400&v=4" width="100px;" alt="Akshita Mehta"/><br /><sub><b>Akshita Mehta</b></sub></a><br />
+    <td align="center"><a href="https://github.com/anshuman73"><img src="https://avatars1.githubusercontent.com/u/12889549?s=460&u=58365bc47b53080185c29242f3cab596080c5808&v=4" width="100px;" alt="Anshuman Aggarwal"/><br /><sub><b>Anshuman Aggarwal</b></sub></a><br />
+    <td align="center"><a href="https://github.com/psifrous"><img src="https://avatars2.githubusercontent.com/u/36012704?s=460&v=4" width="100px;" alt="Naman Bansal"/><br /><sub><b>Naman Bansal</b></sub></a><br />
+    <td align="center"><a href="https://github.com/MehtaAkshita"><img src="https://avatars2.githubusercontent.com/u/44060710?s=400&v=4" width="100px;" alt="Akshita Mehta"/><br /><sub><b>Akshita Mehta</b></sub></a><br />
+    <td align="center"><a href="https://github.com/shreyaspapi"><img src="https://avatars2.githubusercontent.com/u/22324802?s=460&u=b5281f23664d263aaa3024c8936c37a3132adf31&v=4" width="100px;" alt="Shreyas Papinwar"/><br /><sub><b>Shreyas Papinwar</b></sub></a><br />
+    <td align="center"><a href="https://github.com/panwalas"><img src="https://avatars2.githubusercontent.com/u/39371808?s=460&v=4" width="100px;" alt="Swapnil Panwalas"/><br /><sub><b>Swapnil Panwala</b></sub></a><br />
+<td align="center"><a href="https://github.com/Iamzubin"><img src="https://avatars2.githubusercontent.com/u/8392856?s=460&u=e1d91a99e6cb6004b27274e628750258f22763b9&v=4" width="100px;" alt="Zubin Choudhary"/><br /><sub><b>Zubin Choudhary</b></sub></a><br />
  </tr>
 </table>
 
