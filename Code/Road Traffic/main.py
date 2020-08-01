@@ -1986,11 +1986,7 @@ def update_output(value):
                     else:
                         gl.stack.append(i)
                         try:
-                                message = client.messages \
-                        .create(
-                             body="Move to left! Emergency vehicle approaching!!",
-                             from_='+12014823161',
-                             to='+919727342611',)
+                                send_sms()
                         except:
                             return [
 

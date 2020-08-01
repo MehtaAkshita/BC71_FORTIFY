@@ -1,23 +1,15 @@
 import requests
 import json
-URL = 'https://www.way2sms.com/api/v1/sendCampaign'
 
-# get request
-def sendPostRequest(reqUrl, apiKey, secretKey, useType, phoneNo, senderId, textMessage):
-  req_params = {
-  'apikey':apiKey,
-  'secret':secretKey,
-  'usetype':useType,
-  'phone': phoneNo,
-  'message':textMessage,
-  'senderid':senderId
-  }
-  return requests.post(reqUrl, req_params)
-response = sendPostRequest(URL, 'LP9P1EGV64XY1FJGZVFWAEUETDFPD2QG', '9TRUBVP7ABCFB7O4', 'stage', '9717138080', 'Naman', 'Move to the left ambulance is coming' )
-"""
-  Note:-
-    you must provide apikey, secretkey, usetype, mobile, senderid and message values
-    and then requst to api
-"""
-# print response if you want
-print ( response.text)
+def send_sms():
+        url = "https://www.fast2sms.com/dev/bulk"
+
+        querystring = {"authorization":"FPAv82Qgexoyqdika4lmnY7ERrHh6Ww10KZcXUJNL9bV3IBzuGP8wB4Neu2lQUpYOcM3Tj1VKXSHJnFi","sender_id":"FSTSMS","message":"Move to the left ambulance is coming","language":"english","route":"p","numbers":"9971197421"}
+
+        headers = {
+            'cache-control': "no-cache"
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
