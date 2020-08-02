@@ -24,6 +24,8 @@ A project aimed towards bringing the concept of connected cars using several mod
 | --- | --- |
 | Congestion Prevention | Computer Vision based approch to control traffic lights based upon density calculation of vehicles |
 | Facial Wallet for Public Transport | Faster checkin based for public transport system using facial recognition |
+| Rash Drive Detection | Computer Vision based approch to detect vehicles who are constantly changing lanes |
+| Emergency Vehicle Priority | Alert based system to notify vehicles in front of emergency vehicles to keep a lane empty |
 | Pothole Detection | Using Yolov2 to idenetify potholes on the road and notify concerned authorities for the fix |
 
 
