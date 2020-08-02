@@ -1,0 +1,6 @@
+flask = "*"
+flask-sqlalchemy = "*"
+pillow = "*"
+numpy = "*"
+face-recognition = "*"
+opencv-python = "*"

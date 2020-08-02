@@ -12,3 +12,7 @@ def send_sms():
 
         response = requests.request("GET", url, headers=headers, params=querystring)
 
+<<<<<<< HEAD
+=======
+print(response.text)
+>>>>>>> 684307752e7f78fca3b61cb672de43d6ff0a19f2
