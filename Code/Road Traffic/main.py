@@ -82,10 +82,14 @@ class VideoCamera(object):
     def __del__(self):
         self.video.release()
 
-    def get_frame(self):
+    def get_frame(self,x,y):
         success, image = self.video.read()
         if gl.c==5000:
             self.video.set(cv2.CAP_PROP_POS_MSEC,5000)
+        image = cv2.line(image, (260, 0), (0, 350), (0, 255, 0), thickness=4)
+        image = cv2.line(image, (580,0), (380, 720), (0, 255, 0), thickness=4)
+        image = cv2.line(image, (870,0), (970,720), (0, 255, 0), thickness=4)
+        image = cv2.circle(image, (x,y), 15, (0,0,255), 5)
         cv2.imwrite("manipalrun\\temp.jpg",image)
         ret, jpeg = cv2.imencode('.jpg', image)
 
@@ -97,10 +101,12 @@ class VideoCamera(object):
 def gen(camera):
     gl.c = 5000
     c=0
+    x = 0
+    y = 0
     fp = "manipalrun\\temp.jpg"
     while True:
         gl.c = gl.c+500
-        frame = camera.get_frame()
+        frame = camera.get_frame(x,y)
 
         if(c>1):
       
@@ -115,6 +121,28 @@ def gen(camera):
                     
 
                     ages = [li['plate'] for li in a]
+                    ages2 = [li['box'] for li in a]
+                    xmin = [li['xmin'] for li in ages2]
+                    xmax = [li['xmax'] for li in ages2]
+                    ymin = [li['ymin'] for li in ages2]
+                    ymax = [li['ymax'] for li in ages2]
+                    x = (xmin[0] + xmax[0])//2
+                    y = (ymin[0] + ymax[0])//2
+                    position1 = ((0 - 260) * (y - 0) - (350 - 0) * (x- 260)) > 0
+                    position2 = ((380 - 580) * (y - 0) - (720 - 0) * (x - 580)) > 0 
+                    position3 = ((970 - 870) * (y - 0) - (720 - 0) * (x - 870)) > 0 
+                    if(position1 == False and position3 ==True and position2 ==False):
+                        temp = "lane3"
+                    elif(position1 == False and position3 ==True and position2 ==True):
+                        temp = "lane2"
+                    elif(position1 == False and position3 ==False and position2 ==False):
+                        temp = "lane4"
+                    elif(position1 == True and position3 ==True and position2 ==True):
+                        temp = "lane1"
+                    else:
+                        temp = "NaN"
+                    ages.append(temp)
+                    ages.append("No zig zag detected")
                     if(ages==[]):
                         continue
                     else:
@@ -1290,7 +1318,7 @@ app = dash.Dash(__name__,    meta_tags=[
                 external_stylesheets=external_stylesheets)
 
 server = app.server
-app.title = 'Connected Cars 	&#127950;&#65039;'
+app.title = 'Fortify 	&#127950;&#65039;'
 #app.config['suppress_callback_exceptions']=True
 #app.css.append_css({'external_url': 'https://codepen.io/amyoshino/pen/jzXypZ.css'})  # noqa: E501
 #dcc._css_dist[0]['/assets'].append('stylesheet.css')
@@ -1394,8 +1422,8 @@ page_0_layout= html.Div(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src="assets/s.png", height="70px")),
-                        dbc.Col(dbc.NavbarBrand("Connected Cars", className="ml-4",style={"color":"#00ff00"})),
+                        dbc.Col(html.Img(src="assets/s2.png", height="70px")),
+                        dbc.Col(dbc.NavbarBrand("BC71", className="ml-4",style={"color":"#00ff00"})),
                         dbc.Col(dbc.NavLink("Congestion",href="/congestion", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Emergency",href="/Emergency", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Drowsiness",href="/drowsiness", className="ml-4",style={"color":"#fff","font-size": "135%"})),
@@ -1419,7 +1447,7 @@ page_0_layout= html.Div(
                             dash_dangerously_set_inner_html.DangerouslySetInnerHTML(
                                 '''
 
-<div style="text-align:center; margin-top: 5%;"><img  class="animated infinite tada slow delay-2s" src="assets/c.png" width="40%"/></div>
+<div style="text-align:center; margin-top: 5%;"><img  class="animated infinite tada slow delay-2s" src="assets/c2.png" width="40%"/></div>
 <script type="text/javascript" src="jsbat.js"></script>
 
   '''
@@ -1478,8 +1506,8 @@ page_4_layout=html.Div(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src="assets/s.png", height="70px")),
-                        dbc.Col(dbc.NavbarBrand("Connected Cars", className="ml-4",style={"color":"#00ff00"})),
+                        dbc.Col(html.Img(src="assets/s2.png", height="70px")),
+                        dbc.Col(dbc.NavbarBrand("BC71", className="ml-4",style={"color":"#00ff00"})),
                         dbc.Col(dbc.NavLink("Congestion",href="/congestion", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                          dbc.Col(dbc.NavLink("Emergency",href="/Emergency", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Drowsiness",href="/drowsiness", className="ml-4",style={"color":"#fff","font-size": "135%"})),
@@ -1530,8 +1558,8 @@ page_3_layout=html.Div(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src="assets/s.png", height="70px")),
-                        dbc.Col(dbc.NavbarBrand("Connected Cars", className="ml-4",style={"color":"#00ff00"})),
+                        dbc.Col(html.Img(src="assets/s2.png", height="70px")),
+                        dbc.Col(dbc.NavbarBrand("BC71", className="ml-4",style={"color":"#00ff00"})),
                         dbc.Col(dbc.NavLink("Congestion",href="/congestion", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                          dbc.Col(dbc.NavLink("Emergency",href="/Emergency", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Drowsiness",href="/drowsiness", className="ml-4",style={"color":"#fff","font-size": "135%"})),
@@ -1620,8 +1648,8 @@ page_2_layout=html.Div(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src="assets/s.png", height="70px")),
-                        dbc.Col(dbc.NavbarBrand("Connected Cars", className="ml-4",style={"color":"#00ff00"})),
+                        dbc.Col(html.Img(src="assets/s2.png", height="70px")),
+                        dbc.Col(dbc.NavbarBrand("BC71", className="ml-4",style={"color":"#00ff00"})),
                         dbc.Col(dbc.NavLink("Congestion",href="/congestion", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                          dbc.Col(dbc.NavLink("Emergency",href="/Emergency", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Drowsiness",href="/drowsiness", className="ml-4",style={"color":"#fff","font-size": "135%"})),
@@ -1707,8 +1735,8 @@ page_1_layout = html.Div(
                 # Use row and col to control vertical alignment of logo / brand
                 dbc.Row(
                     [
-                        dbc.Col(html.Img(src="assets/s.png", height="70px")),
-                        dbc.Col(dbc.NavbarBrand("Connected Cars", className="ml-4",style={"color":"#00ff00"})),
+                        dbc.Col(html.Img(src="assets/s2.png", height="70px")),
+                        dbc.Col(dbc.NavbarBrand("BC71", className="ml-4",style={"color":"#00ff00"})),
                         dbc.Col(dbc.NavLink("Congestion",href="/congestion", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                          dbc.Col(dbc.NavLink("Emergency",href="/Emergency", className="ml-4",style={"color":"#fff","font-size": "135%"})),
                         dbc.Col(dbc.NavLink("Drowsiness",href="/drowsiness", className="ml-4",style={"color":"#fff","font-size": "135%"})),
