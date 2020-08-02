@@ -76,6 +76,12 @@ Our project comprises of the following modules:
 
 <p align="center"><img src="" width="400" /></p>
 
+ 3) **Facial Wallet:** Public Transportation system is widely used by many in the cities, to fastrack the ticketing services and remove long lines, we bring to you facial wallet which used face detection algorithm to detect the faces and cut the amount directly from the installed cctv's
+
+4) **Emergency Vehicle Priority:** Many people die in India because emergency vehicles don't reach required destination in time. Can we save life by informing people in advance about an incoming emergency vehicle? Definitely yes!
+ 
+5) **Rash Driving Detection:** Detects rash driving on roads especially changing of lanes very frequently.
+
 So drive happy and safe 😊 
 
 ## Other 
