@@ -1,15 +1,15 @@
-## BC71_FORTIFY - SIH_2020 - RKGIT - Ministry of Housing and Urban affairs
+## BC71_FORTIFY - SIH_2020 - RKGIT - Ministry of Housing & Urban affairs, Gov. of India
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)] 
 [![GitHub contributors](https://img.shields.io/github/contributors/MehtaAkshita/BC71_FORTIFY)]
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MehtaAkshita/BC71_FORTIFY)]
 
-<p align="center"><img src="logo_source" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/BC71_Fortify.png" width="400" /></p>
 
 ## Overview
 <p align="center">
  <li>
-A project aimed towards bringing the concept of connected cars using several modules.</li>
+Our cities are expanding and most of the people have to travel more than 2 hours daily to commute between their place of work and stay. How can we reduce this time?</li>
 </p>
 
 ## Project information ℹ️
@@ -61,20 +61,20 @@ A project aimed towards bringing the concept of connected cars using several mod
 
 Connected Cars is an initiative to improve traffic conditions, shorten duration of time taken by emergency vehicles to reach desired destination, avoiding potholes and crashes along with making cities smart in an efficient and effective way by making vehicles communicate i.e. help. Moverover, our concept aims to use the existing infrastructure installed in roads, crossings and cars, thus making it feasible to deploy economically! 
 
-<p align="center"><img src="" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-26.png" width="400" /></p>
 
 Our project comprises of the following modules:
  1) **Congestion Prevention:** Don't you get fed up when you have to wait on traffic signal even when there is no car in the other lane. Can we control traffic lights based on car density in a particular lane? Yes! 
 
 <p float="left">
-  <img src="" width="400" />
-  <img src="" width="400" /> 
+  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-36.png" width="400" />
+  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-37-25.png" width="400" /> 
 </p>
 
 
  2) **Pothole Detection** : Potholes can cause severe damages to cars, passengers and to pedistrians too. It can damage your tire's sidewall or belts. Even a minor impact may knock your vehicle out of alignment. A pothole strike can damage your shocks or struts, or harm your suspension. Can we detect them and inform about that to the concerned authority and maintain a database? Sure yes! 
 
-<p align="center"><img src="" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-38-15.png" width="400" /></p>
 
  3) **Facial Wallet:** Public Transportation system is widely used by many in the cities, to fastrack the ticketing services and remove long lines, we bring to you facial wallet which used face detection algorithm to detect the faces and cut the amount directly from the installed cctv's
 
@@ -86,7 +86,7 @@ So drive happy and safe 😊
 
 ## Other 
 
-_In our project we have developed 1 Android App, with 5 integrated modules in a web app_
+_In this project we have developed 7 Web-based modules and integraded an Android Application_
 
 **Current Opportunity** 🚀 :  We can use these modules on existing infrastructure i.e CCTV's installed on public places/traffic signals, and in government vehicles, we don't need any new infrastructure, we will just extract more information from the current infrastructure present.
 
