@@ -31,7 +31,7 @@ Our cities are expanding and most of the people have to travel more than 2 hours
 
 
 - **Team Name**: FORTIFY
-- **Team Members**:  _ Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Anshuman Aggarwal [@anshuman73](https://github.com/https://github.com/anshuman73), Naman Bansal [@psifrous](https://github.com/psifrous), Shreyas Papinwar [@shreyaspapi](https://github.com/shreyaspapi), Swapnil Panwala [@panwalas](https://github.com/panwalas), Zubin Choudhary [@Iamzubin](https://github.com/Iamzubin)_
+- **Team Members**:  _ Akshita Mehta [@MehtaAkshita](https://github.com/MehtaAkshita), Anshuman Aggarwal [@anshuman73](https://github.com/https://github.com/anshuman73), Naman Bansal [@psifrous](https://github.com/psifrous), Shreyas Papinwar [@shreyaspapi](https://github.com/shreyaspapi), Swapnil Panwala [@panwalas](https://github.com/panwalas), Zubin Choudhary [@Iamzubin](https://github.com/Iamzubin)
 - **Repository Link**: https://github.com/MehtaAkshita/BC71_FORTIFY
 - **Labels**: ML, Image & Video Processing, Facial recognition, Android App, Web Development<br>
 
