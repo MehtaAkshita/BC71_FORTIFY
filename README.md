@@ -86,7 +86,7 @@ So drive happy and safe 😊
 
 ## Other 
 
-_In this project we have developed 1 Android App, with 7 integrated modules in a web app_
+_In this project we have developed 7 Web-based modules and integraded an Android Application_
 
 **Current Opportunity** 🚀 :  We can use these modules on existing infrastructure i.e CCTV's installed on public places/traffic signals, and in government vehicles, we don't need any new infrastructure, we will just extract more information from the current infrastructure present.
 
