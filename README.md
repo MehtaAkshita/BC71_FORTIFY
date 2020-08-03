@@ -4,7 +4,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/MehtaAkshita/BC71_FORTIFY)]
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MehtaAkshita/BC71_FORTIFY)]
 
-<p align="center"><img src="logo_source" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/BC71_Fortify.png" width="400" /></p>
 
 ## Overview
 <p align="center">
