@@ -11,11 +11,12 @@ def load_faces():
     all_faces = Face.query.all()
     known_faces = [pickle.loads(face.face_encoding) for face in all_faces]
     known_faces_id = [face.user.id for face in all_faces]
-
-load_faces()
+    return known_faces, known_faces_id
 
 
 def give_match(image_vector):
+    known_faces, known_faces_id = load_faces()
+    print('known_faces_id:', known_faces_id)
     face_locations = face_recognition.face_locations(image_vector)
     unknown_faces = face_recognition.face_encodings(image_vector, face_locations)
     people_found = []

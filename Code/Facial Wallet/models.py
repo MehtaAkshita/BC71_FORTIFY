@@ -5,12 +5,14 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.UnicodeText, unique=True)
     password = db.Column(db.UnicodeText)
+    balance = db.Column(db.Integer)
     faces = db.relationship('Face', backref='user', lazy=True)
     checks = db.relationship('Check', backref='user', lazy=True)
 
     def __init__(self, username, password):
         self.username = username
         self.password = password
+        self.balance = 100
     
     @staticmethod
     def get_by_id(id):
@@ -19,6 +21,13 @@ class User(db.Model):
     @staticmethod
     def get_by_username(username):
         return User.query.filter_by(username=username).first()
+    
+    @staticmethod
+    def change_balance(username, amount):
+        user = User.query.filter_by(username=username).first()
+        user.balance += amount
+        db.add(user)
+        db.commit()
 
 
 class Face(db.Model):
