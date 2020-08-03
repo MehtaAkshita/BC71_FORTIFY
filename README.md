@@ -61,7 +61,7 @@ A project aimed towards bringing the concept of connected cars using several mod
 
 Connected Cars is an initiative to improve traffic conditions, shorten duration of time taken by emergency vehicles to reach desired destination, avoiding potholes and crashes along with making cities smart in an efficient and effective way by making vehicles communicate i.e. help. Moverover, our concept aims to use the existing infrastructure installed in roads, crossings and cars, thus making it feasible to deploy economically! 
 
-<p align="center"><img src="" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-26.png" width="400" /></p>
 
 Our project comprises of the following modules:
  1) **Congestion Prevention:** Don't you get fed up when you have to wait on traffic signal even when there is no car in the other lane. Can we control traffic lights based on car density in a particular lane? Yes! 
