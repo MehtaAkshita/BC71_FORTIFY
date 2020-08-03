@@ -1,4 +1,4 @@
-## BC71_FORTIFY - SIH_2020 - RKGIT - Ministry of Housing and Urban affairs
+## BC71_FORTIFY - SIH_2020 - RKGIT - Ministry of Housing & Urban affairs, Gov. of India
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)] 
 [![GitHub contributors](https://img.shields.io/github/contributors/MehtaAkshita/BC71_FORTIFY)]
