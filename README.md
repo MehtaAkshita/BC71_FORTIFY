@@ -9,7 +9,7 @@
 ## Overview
 <p align="center">
  <li>
-A project aimed towards bringing the concept of connected cars using several modules.</li>
+Our cities are expanding and most of the people have to travel more than 2 hours daily to commute between their place of work and stay. How can we reduce this time?</li>
 </p>
 
 ## Project information ℹ️
