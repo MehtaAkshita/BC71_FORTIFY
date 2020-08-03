@@ -67,8 +67,8 @@ Our project comprises of the following modules:
  1) **Congestion Prevention:** Don't you get fed up when you have to wait on traffic signal even when there is no car in the other lane. Can we control traffic lights based on car density in a particular lane? Yes! 
 
 <p float="left">
-  <img src="" width="400" />
-  <img src="" width="400" /> 
+  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-36.png" width="400" />
+  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-36.png" width="400" /> 
 </p>
 
 
