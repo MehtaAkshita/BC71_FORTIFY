@@ -74,7 +74,7 @@ Our project comprises of the following modules:
 
  2) **Pothole Detection** : Potholes can cause severe damages to cars, passengers and to pedistrians too. It can damage your tire's sidewall or belts. Even a minor impact may knock your vehicle out of alignment. A pothole strike can damage your shocks or struts, or harm your suspension. Can we detect them and inform about that to the concerned authority and maintain a database? Sure yes! 
 
-<p align="center"><img src="" width="400" /></p>
+<p align="center"><img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-38-15.png" width="400" /></p>
 
  3) **Facial Wallet:** Public Transportation system is widely used by many in the cities, to fastrack the ticketing services and remove long lines, we bring to you facial wallet which used face detection algorithm to detect the faces and cut the amount directly from the installed cctv's
 
