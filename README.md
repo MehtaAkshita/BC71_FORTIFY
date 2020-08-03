@@ -68,7 +68,7 @@ Our project comprises of the following modules:
 
 <p float="left">
   <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-36.png" width="400" />
-  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-36-36.png" width="400" /> 
+  <img src="https://github.com/MehtaAkshita/BC71_FORTIFY/blob/master/Screenshots/Screenshot%20from%202020-08-02%2022-37-25.png" width="400" /> 
 </p>
 
 
