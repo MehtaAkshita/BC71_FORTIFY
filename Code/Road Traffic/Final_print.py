@@ -10,5 +10,5 @@ for j in f:
     list(j)
 mylist2=j.split(',')
 del mylist2[-1]
-for k in range(0,len(mylist)):
+for k in range(len(mylist)):
     print("Density of cars from cam",k+1,"is",mylist[k],"and Updated Signal Time =",mylist2[k],"mins")

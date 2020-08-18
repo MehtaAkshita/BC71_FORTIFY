@@ -12,7 +12,7 @@ success,image = vidcap.read()
 vidcap.set(cv2.CAP_PROP_POS_MSEC,5000)
 while success==True:
     success,image = vidcap.read()
-    c = c+500
+    c += 500
     cv2.imshow("+500",image)
     cv2.imwrite("manipalrun\\temp.jpg", image)
 
@@ -28,16 +28,16 @@ while success==True:
             headers={'Authorization': 'Token e51e886ac73bae80c70f612e573a77f7ca5b40df'})
         try:
             a=response.json()['results']
-                
+
             ages = [li['plate'] for li in a]
-                
+
             if(ages==[]):
                 continue
             else:
                 print(ages)
 
 
-            
+
         except Exception:
             print('Not detected!')
     fp.close()

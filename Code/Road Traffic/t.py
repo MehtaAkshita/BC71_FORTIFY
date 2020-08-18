@@ -99,11 +99,11 @@ def gen(camera):
     c=0
     fp = "manipalrun\\temp.jpg"
     while True:
-        gl.c = gl.c+500
+        gl.c += 500
         frame = camera.get_frame()
 
         if(c>1):
-      
+
             with open('manipalrun\\temp.jpg', 'rb') as fp:
                 response = requests.post(
                     'https://api.platerecognizer.com/v1/plate-reader/',
@@ -112,7 +112,7 @@ def gen(camera):
                     headers={'Authorization': 'Token 4276492405dad1a72f659131bdfc98219e7e3851'})
                 try:
                     a=response.json()['results']
-                    
+
 
                     ages = [li['plate'] for li in a]
                     if(ages==[]):
@@ -123,7 +123,7 @@ def gen(camera):
                 except:
                     pass
 
-        c+=1                              
+        c+=1
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
@@ -1879,15 +1879,11 @@ page_1_layout = html.Div(
     [dash.dependencies.Output('output-container-button', 'children'),
     dash.dependencies.Output('output-container-button2', 'children')],
     [dash.dependencies.Input('input-box', 'value')])
-
 def update_output(value):
     city_name = value
     geolocator = Nominatim(user_agent="hackverse")
     location = geolocator.geocode(city_name)
-    loc = []
-    loc.append(location.latitude)
-    loc.append(location.longitude)
-
+    loc = [location.latitude, location.longitude]
     url = "https://geocodeapi.p.rapidapi.com/GetNearestCities"
 
     querystring = {"latitude":loc[0],"longitude":loc[1],"range":"0"}
@@ -1905,9 +1901,9 @@ def update_output(value):
     pop = 0
     city = []
     output = []
-    for i in range(0,3): 
-            pop = pop + y[i]["Population"]
-            city.append(y[i]["City"])
+    for i in range(3): 
+        pop += y[i]["Population"]
+        city.append(y[i]["City"])
     output.append('Expected population affected: '+ str(pop))
     output.append('Expected Cities affected: '+str(",".join(city)))
     #print(output)
@@ -2024,56 +2020,48 @@ def update_image_src(value):
         dash.dependencies.Output('output-plate', 'children'),
         [dash.dependencies.Input('interval-component', 'n_intervals')]
     )
-
-
-
-
-
 def update_output(value):
-        if gl.number=='':
-            return ''
-        else:
+    if gl.number=='':
+        return ''
+    else:
 
 
             #print(gl.plate)
 
-            for i in gl.number:
-                if i in gl.plate:
-                    user,mob=gl.plate[i].split(" ")
-                    if i in gl.stack:
-                        pass
-                    else:
-                        gl.stack.append(i)
-                        try:
-                                message = client.messages \
-                        .create(
-                             body="Move to left! Emergency vehicle approaching!!",
-                             from_='+12014823161',
-                             to='+919727342611',)
-                        except:
-                            return [
+        for i in gl.number:
+            if i in gl.plate and i not in gl.stack:
+                user,mob=gl.plate[i].split(" ")
+                gl.stack.append(i)
+                try:
+                        message = client.messages \
+                .create(
+                     body="Move to left! Emergency vehicle approaching!!",
+                     from_='+12014823161',
+                     to='+919727342611',)
+                except:
+                    return [
 
-                                html.Div([
-                                html.H6('       \u2b50 Detected Number \ud83d\udd22 Plate '+str(", ".join(gl.number)))
-                                ],style={"text-align":"center"})
-                                ]
-                            
-                        return [
+                        html.Div([
+                        html.H6('       \u2b50 Detected Number \ud83d\udd22 Plate '+str(", ".join(gl.number)))
+                        ],style={"text-align":"center"})
+                        ]
 
-                            html.Div([
-                            html.Div(html.P('	\ud83d\udce7 Message has been delivered to '+user)),html.H6('\u2b50 Detected Number \ud83d\udd22 Plate'+str(", ".join(gl.number)))
-                            ],style={"text-align":"center"}),
+                return [
+
+                    html.Div([
+                    html.Div(html.P('	\ud83d\udce7 Message has been delivered to '+user)),html.H6('\u2b50 Detected Number \ud83d\udd22 Plate'+str(", ".join(gl.number)))
+                    ],style={"text-align":"center"}),
 
 
-                            ]
-            return [
+                    ]
+        return [
 
-                
-                html.Div([
-                html.H6('	\u2b50 Detected Number 	\ud83d\udd22 Plate '+str(", ".join(gl.number)))
 
-                ],style={"text-align":"center"})
-                ]
+            html.Div([
+            html.H6('	\u2b50 Detected Number 	\ud83d\udd22 Plate '+str(", ".join(gl.number)))
+
+            ],style={"text-align":"center"})
+            ]
 
 
 
