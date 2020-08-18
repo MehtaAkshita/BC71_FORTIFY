@@ -15,7 +15,7 @@ success,image = vidcap.read()
 vidcap.set(cv2.CAP_PROP_POS_MSEC,5000)
 while success==True:
     success,image = vidcap.read()
-    c = c+500
+    c += 500
 ###################################################
     #center_coordinates = (260,0)
     #center_coordinates = (0,350)
@@ -43,7 +43,7 @@ while success==True:
             headers={'Authorization': 'Token e51e886ac73bae80c70f612e573a77f7ca5b40df'})
         try:
             a=response.json()['results']
-                
+
             ages = [li['plate'] for li in a]
             ages2 = [li['box'] for li in a]
             xmin = [li['xmin'] for li in ages2]
@@ -53,9 +53,9 @@ while success==True:
             x = (xmin[0] + xmax[0])//2
             y = (ymin[0] + ymax[0])//2
             position1 = ((0 - 260) * (y - 0) - (350 - 0) * (x- 260)) > 0
-            position2 = ((380 - 580) * (y - 0) - (720 - 0) * (x - 580)) > 0 
-            position3 = ((970 - 870) * (y - 0) - (720 - 0) * (x - 870)) > 0 
-            if(position1 == False and position3 ==True and position2 ==False):
+            position2 = ((380 - 580) * (y - 0) - (720 - 0) * (x - 580)) > 0
+            position3 = ((970 - 870) * (y - 0) - (720 - 0) * (x - 870)) > 0
+            if not position1 and position3 and not position2:
                 temp = "lane3"
             elif(position1 == False and position3 ==True and position2 ==True):
                 temp = "lane2"

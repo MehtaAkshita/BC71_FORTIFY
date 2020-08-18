@@ -8,6 +8,7 @@ def mapsUrlGenerator(origin_loc, destin_loc):
     d = destin_loc.replace(',','%2C').replace(' ','+')
     maps_url = 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiSn0MjocO8y1pumGHjU6ClUBir0LVms8&origin={}&destination={}'.format(o,d)
 
-    embed_url = '<iframe width="300" height="350" frameborder="0" style="border:0" src={} allowfullscreen></iframe>'.format(maps_url)
-    return(embed_url)
+    return '<iframe width="300" height="350" frameborder="0" style="border:0" src={} allowfullscreen></iframe>'.format(
+        maps_url
+    )
 print(mapsUrlGenerator(origin_loc, destin_loc))
