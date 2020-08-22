@@ -78,7 +78,7 @@ while True:
 		D = dist.cdist(centroids, centroids, metric="euclidean")
 
 		# loop over the upper triangular of the distance matrix
-		for i in range(0, D.shape[0]):
+		for i in range(D.shape[0]):
 			for j in range(i + 1, D.shape[1]):
 				# check to see if the distance between any two
 				# centroid pairs is less than the configured number

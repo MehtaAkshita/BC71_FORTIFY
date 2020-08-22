@@ -105,11 +105,11 @@ def gen(camera):
     y = 0
     fp = "manipalrun\\temp.jpg"
     while True:
-        gl.c = gl.c+500
+        gl.c += 500
         frame = camera.get_frame(x,y)
 
-        if(c>1):
-      
+        if (c>1):
+              
             with open('manipalrun\\temp.jpg', 'rb') as fp:
                 response = requests.post(
                     'https://api.platerecognizer.com/v1/plate-reader/',
@@ -118,7 +118,7 @@ def gen(camera):
                     headers={'Authorization': 'Token 4276492405dad1a72f659131bdfc98219e7e3851'})
                 try:
                     a=response.json()['results']
-                    
+
 
                     ages = [li['plate'] for li in a]
                     ages2 = [li['box'] for li in a]
@@ -129,9 +129,9 @@ def gen(camera):
                     x = (xmin[0] + xmax[0])//2
                     y = (ymin[0] + ymax[0])//2
                     position1 = ((0 - 260) * (y - 0) - (350 - 0) * (x- 260)) > 0
-                    position2 = ((380 - 580) * (y - 0) - (720 - 0) * (x - 580)) > 0 
-                    position3 = ((970 - 870) * (y - 0) - (720 - 0) * (x - 870)) > 0 
-                    if(position1 == False and position3 ==True and position2 ==False):
+                    position2 = ((380 - 580) * (y - 0) - (720 - 0) * (x - 580)) > 0
+                    position3 = ((970 - 870) * (y - 0) - (720 - 0) * (x - 870)) > 0
+                    if not position1 and position3 and not position2:
                         temp = "lane3"
                     elif(position1 == False and position3 ==True and position2 ==True):
                         temp = "lane2"
@@ -151,7 +151,7 @@ def gen(camera):
                 except:
                     pass
 
-        c+=1                              
+        c+=1
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
@@ -1112,9 +1112,7 @@ def gen5(camera):
         B = dist.euclidean(mouth[3],mouth[9])
         C = dist.euclidean(mouth[4],mouth[8])
 
-        mar = (A+B+C)/3
-
-        return mar
+        return (A+B+C)/3
 
 
     ##ap = argparse.ArgumentParser()
@@ -1993,52 +1991,44 @@ def update_image_src(value):
         dash.dependencies.Output('output-plate', 'children'),
         [dash.dependencies.Input('interval-component', 'n_intervals')]
     )
-
-
-
-
-
 def update_output(value):
-        if gl.number=='':
-            return ''
-        else:
+    if gl.number=='':
+        return ''
+    else:
 
 
             #print(gl.plate)
 
-            for i in gl.number:
-                if i in gl.plate:
-                    user,mob=gl.plate[i].split(" ")
-                    if i in gl.stack:
-                        pass
-                    else:
-                        gl.stack.append(i)
-                        try:
-                                send_sms()
-                        except:
-                            return [
+        for i in gl.number:
+            if i in gl.plate and i not in gl.stack:
+                user,mob=gl.plate[i].split(" ")
+                gl.stack.append(i)
+                try:
+                        send_sms()
+                except:
+                    return [
 
-                                html.Div([
-                                html.H6('       \u2b50 Detected Number \ud83d\udd22 Plate '+str(", ".join(gl.number)))
-                                ],style={"text-align":"center"})
-                                ]
-                            
-                        return [
+                        html.Div([
+                        html.H6('       \u2b50 Detected Number \ud83d\udd22 Plate '+str(", ".join(gl.number)))
+                        ],style={"text-align":"center"})
+                        ]
 
-                            html.Div([
-                            html.Div(html.P('	\ud83d\udce7 Message has been delivered to '+user)),html.H6('\u2b50 Detected Number \ud83d\udd22 Plate'+str(", ".join(gl.number)))
-                            ],style={"text-align":"center"}),
+                return [
+
+                    html.Div([
+                    html.Div(html.P('	\ud83d\udce7 Message has been delivered to '+user)),html.H6('\u2b50 Detected Number \ud83d\udd22 Plate'+str(", ".join(gl.number)))
+                    ],style={"text-align":"center"}),
 
 
-                            ]
-            return [
+                    ]
+        return [
 
-                
-                html.Div([
-                html.H6('	\u2b50 Detected Number 	\ud83d\udd22 Plate '+str(", ".join(gl.number)))
 
-                ],style={"text-align":"center"})
-                ]
+            html.Div([
+            html.H6('	\u2b50 Detected Number 	\ud83d\udd22 Plate '+str(", ".join(gl.number)))
+
+            ],style={"text-align":"center"})
+            ]
 
 
 
